@@ -1,7 +1,7 @@
 "use strict";
 
 const url = document.location.href;
-const mainUrl = document.location.host;
+const mainUrl = "https://egg-type.web.app/";
 
 const kakao_btn = document.querySelector(".shares .kakao");
 const facebook_btn = document.querySelector(".shares .facebook");
