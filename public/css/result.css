@@ -260,27 +260,19 @@ ul {
 }
 
 .resultBtn {
-    width: 65%;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    margin: 30px 0 100px 0;
+  width: 35%;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  margin: 30px 0 100px 0;
+  flex-direction: column;
 }
 
-/* .resultBtn .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background-color: #ffab00;
-    color: #424242;
-    padding: 10px 15px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    font-family: "BMHANNAPro";
-    cursor: pointer;
-} */
+.resultBtn .btn {
+  width: 100%;
+}
+
 
 @media screen and (max-width: 480px) {
   .guideline-container {
@@ -301,9 +293,19 @@ ul {
   .youtube-link {
     padding: 8px 12px;
   }
+  .resultBtn {
+    width: 50%;
+  }
 }
 
 @media (max-width: 425px) {
+  img {
+    width: 17rem;
+    height: 17rem;
+  }
+}
+
+@media (max-width: 380px) {
   img {
     width: 17rem;
     height: 17rem;
