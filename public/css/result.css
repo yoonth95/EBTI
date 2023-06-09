@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BMHANNAPro";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}
+
+.appContainer {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  overflow: visible;
+  max-width: 550px;
+  min-height: 550px;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+
+.totalPage {
+  transition: background-color 0.2s ease;
+  z-index: 99;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff2cc;
+  box-shadow: 0 -2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.resultPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#typeName {
+  font-family: "BMJUA";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin-top: 50px;
+  text-align: center;
+  color: #8b4513;
+}
+
+#typeTitle {
+  font-family: "BMHANNAPro";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #654321;
+}
+
+#typeTag {
+  font-family: "BMHANNAPro";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #654321;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.resultInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+.resultInfo #typeInfo {
+  margin: 20px 0 40px 0;
+}
+
+.resultInfo #typeInfo li {
+  margin-bottom: 10px;
+  font-family: "BMHANNAPro";
+}
+
+.resultInfo .level-up {
+  margin-top: 25px;
+  border: 1px solid #ffe400;
+  background-color: #ffe400;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.resultImage img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: contain;
+  margin: 35px 0;
+}
+
+.guideline-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: "BMJUA";
+  background-color: #fff9c4;
+}
+
+.guideline-title {
+  font-size: 24px;
+  color: #ffab00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.guideline-list {
+  list-style: decimal;
+  padding: 0 10px 0 20px;
+}
+
+.guideline-item {
+  font-family: "BMHANNAPro";
+  font-size: 16px;
+  color: #424242;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.url_down {
+  width: 100%;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.youtube-link,
+.resultDown,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #ffab00;
+  color: #424242;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-family: "BMHANNAPro";
+  cursor: pointer;
+}
+
+.youtube-link .material-icons {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.youtube-link:hover,
+.resultDown:hover,
+.btn:hover {
+  background-color: #ffe400;
+  text-decoration: none;
+}
+
+.resultShare {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultShare p {
+    font-size: 16px;
+    font-family: "BMHANNAPro";
+}
+
+.shares {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.shares button {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: 0px center;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+}
+
+.shares button:hover {
+  transform: translateY(-4px);
+}
+
+.shares button.clip {
+  background-color: rgb(255, 138, 115);
+}
+
+.shares button.kakao {
+  background-color: rgb(247, 213, 1);
+}
+
+.shares button.facebook {
+  background-color: rgb(57, 85, 152);
+}
+
+.shares button.twitter {
+  background-color: rgb(45, 182, 247);
+}
+
+.shares button svg {
+  width: 26px;
+  height: 26px;
+  fill: rgb(255, 255, 255);
+}
+
+.resultBtn {
+    width: 65%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    margin: 30px 0 100px 0;
+}
+
+/* .resultBtn .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #ffab00;
+    color: #424242;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-family: "BMHANNAPro";
+    cursor: pointer;
+} */
+
+@media screen and (max-width: 480px) {
+  .guideline-container {
+    padding: 10px;
+  }
+
+  .guideline-title {
+    font-size: 20px;
+  }
+
+  .guideline-item {
+    font-size: 14px;
+  }
+
+  .youtube-link .material-icons {
+    font-size: 16px;
+  }
+  .youtube-link {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  img {
+    width: 17rem;
+    height: 17rem;
+  }
+}

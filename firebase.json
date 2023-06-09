@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/test",
+        "destination": "/test.html"
+      },
+      {
+        "source": "/result",
+        "destination": "/result.html"
+      },      
+      {
+        "source": "/view",
+        "destination": "/view.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "notfoundPage": "/404.html"
+  }
+}

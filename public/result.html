@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/result.css">
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js" integrity="sha384-x+WG2i7pOR+oWb6O5GV5f1KN2Ko6N7PTGPS7UlasYWNxZMKQA63Cj/B2lbUmUfuC" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+        import { firebaseConfig, kakao_key } from '/js/modules.js';
+    
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        Kakao.init(kakao_key);
+    </script>
+
+    <div class="appContainer">
+        <div class="totalPage">
+            <!-- 결과 부분 -->
+            <div class="resultPage">
+                <div class="resultTitle">
+                    <!-- 유형 -->
+                    <h1 id="typeName"></h1>
+                    
+                    <!-- 한 줄 요약 -->
+                    <p id="typeTitle"></p>
+                </div>
+    
+                <div class="resultImage">
+                    <!-- 이미지 -->
+                    <img id="typeImage" src="">
+    
+                    <!-- 태그 -->
+                    <div id="typeTag"></div>
+                </div>
+    
+                <div class="resultInfo">
+                    <!-- 특징 -->
+                    <ul id="typeInfo"></ul>
+    
+                    <!-- 성장 지침 -->
+                    <div class="guideline-container">
+                        <h2 class="guideline-title">Level-Up Guide</h2>
+                        <ol class="guideline-list" id="typeGuide"></ol>
+                    </div>
+    
+    
+                </div>
+            </div>
+
+            <!-- 링크 및 다운로드 버튼 -->
+            <div class="url_down">
+                <!-- 레시피 링크 -->
+                <a href="" class="youtube-link" id="typeUrl" target="_blank">
+                    <span style="margin-right: 5px"><i class="fa-regular fa-circle-play"></i></span>
+                    <span>레시피 보기</span>
+                </a>
+    
+                <!-- 결과 다운로드 -->
+                <!-- <div class="resultDown">
+                    <span style="margin-right: 5px"><i class="fa-solid fa-egg"></i></span>
+                    <span>결과 다운로드</span>
+                </div> -->
+            </div>
+    
+            <!-- 공유 -->
+            <div class="resultShare">
+                <p>친구에게 테스트 공유하기</p>
+                <div class="shares">
+                    <button type="button" class="kakao"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 3c5.799 0 10.5 3.664 10.5 8.185 0 4.52-4.701 8.184-10.5 8.184a13.5 13.5 0 0 1-1.727-.11l-4.408 2.883c-.501.265-.678.236-.472-.413l.892-3.678c-2.88-1.46-4.785-3.99-4.785-6.866C1.5 6.665 6.201 3 12 3zm5.907 8.06l1.47-1.424a.472.472 0 0 0-.656-.678l-1.928 1.866V9.282a.472.472 0 0 0-.944 0v2.557a.471.471 0 0 0 0 .222V13.5a.472.472 0 0 0 .944 0v-1.363l.427-.413 1.428 2.033a.472.472 0 1 0 .773-.543l-1.514-2.155zm-2.958 1.924h-1.46V9.297a.472.472 0 0 0-.943 0v4.159c0 .26.21.472.471.472h1.932a.472.472 0 1 0 0-.944zm-5.857-1.092l.696-1.707.638 1.707H9.092zm2.523.488l.002-.016a.469.469 0 0 0-.127-.32l-1.046-2.8a.69.69 0 0 0-.627-.474.696.696 0 0 0-.653.447l-1.661 4.075a.472.472 0 0 0 .874.357l.33-.813h2.07l.299.8a.472.472 0 1 0 .884-.33l-.345-.926zM8.293 9.302a.472.472 0 0 0-.471-.472H4.577a.472.472 0 1 0 0 .944h1.16v3.736a.472.472 0 0 0 .944 0V9.774h1.14c.261 0 .472-.212.472-.472z"></path></g></svg></button>
+                    <button type="button" class="facebook"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"></path></g></svg></button>
+                    <button type="button" class="twitter"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"></path></g></svg></button>
+                    <button type="button" class="clip"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"></path></g></svg></button>
+                </div>
+            </div>
+
+            <!-- 재시작, 유형 확인 버튼 -->
+            <div class="resultBtn">
+                <button type="button" class="btn retry"><i class="fa-solid fa-reply"></i>&nbsp;테스트 다시 하기</button>
+                <button type="button" class="btn viewType"><i class="fa-solid fa-table-list"></i>&nbsp;전체 유형 보기</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/qwr.js"></script>
+    <script type="text/javascript" src="/js/result.js"></script>
+    <script type="text/javascript" src="/js/share.js"></script>
+</body>
+</html>

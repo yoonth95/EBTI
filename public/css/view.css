@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #fff2cc; /* 계란 흰자의 색상 */
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 16px);
+  text-align: center;
+  position: relative;
+  max-width: 425px;
+  align-items: center;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: auto;
+  justify-content: center;
+}
+h1 {
+  font-family: "BMJUA";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 5px;
+  color: #8b4513;
+}
+h2 {
+  background: linear-gradient(to top, #ffe400 50%, transparent 50%);
+  font-family: "BMJUA";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 36px;
+  color: #654321;
+  margin: 10px auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px; 
+  width: 100%;
+  height: 50%;
+  margin: 25px 0px 50px 0;
+}
+
+.grid-item {
+  /* background-color: #ffab00;  */
+  background-color: #fff; 
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px; 
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-decoration-line: none
+}
+
+.grid-item:hover {
+  background-color: #ffcc00;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.grid-item p { 
+  text-decoration: none;
+  margin: 5px 0 0 0;
+  font-family: "BMJUA";
+  color: #654321;
+}
+
+@media (max-width: 375px) {
+  .grid-item p {font-size: 0.9rem;}
+  h1 {font-size: 1.5rem;}
+  h2 {font-size: 1.6rem;}
+}

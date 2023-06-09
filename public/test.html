@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container center-screen">
+        <div class="progress-div">
+            <span class="progress-text"><strong id="progress_num"></strong> / 10</span>
+            <div style="display: flex; align-items: center;">
+                <span class="prevBtn" onclick="prevClick()"><i class="fa-solid fa-chevron-left"></i></span>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="10" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question_div">
+            <div class="question">
+                <i class="fa-solid fa-children"></i>
+                새로운 환경이나 <br>변화에 직면했을 때, 나는
+            </div>
+        </div>
+        
+        <div class="button_div">
+            <button type="button" class="btn start-button" id="a1" onclick="btnClick('1')">주변 사람들과 이야기하며 적응하는 것을 선호한다.</button>
+            <button type="button" class="btn start-button" id="a2" onclick="btnClick('2')">혼자 생각하며 적응하는 것을 선호한다.</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/qwr.js"></script>
+    <script type="text/javascript" src="/js/test.js"></script>
+</body>
+</html>

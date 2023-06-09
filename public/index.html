@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="name" content="심리테스트, 성격 유형 검사, 성격 유형 테스트, 성격 테스트, mbti 테스트, 계란, 계란 테스트, 계란요리 테스트, 계란 요리 테스트, 계란 요리, test, mbti, MBTI">
+  <meta name="description" content="나는 어떤 계란 요리일까? 계란 요리로 보는 성격 유형 테스트">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="나는 어떤 계란 요리일까?">
+  <meta property="og:description" content="계란 요리로 보는 성격 유형 테스트">
+  <meta property="og:image" content="/images/main_image.png">
+  <meta property="og:url" content="https://egg-type.web.app/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://egg-type.web.app/">
+  <meta name="twitter:title" content="나는 어떤 계란 요리일까?">
+  <meta name="twitter:description" content="계란 요리로 보는 성격 유형 테스트"> 
+  <meta name="twitter:image" content="/images/main_image.png">
+
+  <title>나는 어떤 계란 요리일까?</title>
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <meta name="naver-site-verification" content="bc0134822c2d9a0fb835c8c8b809241f828c9e96" />
+  <meta name="google-site-verification" content="tLCo1dytXXMahaAPRmeFiR5cOUmOo2BthSkoA-QTetA" />
+</head>
+<body>
+  <div class="container center-screen">
+    <div>
+      <h1>성격 유형 테스트</h1>
+      <h2>나는 어떤 계란 요리일까?</h2>
+    </div>
+    <img src="/images/img1.png">
+    <button type="button" class="btn start-button">시작하기</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    import { firebaseConfig } from '/js/modules.js';
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script>
+    document.querySelector(".btn").onclick = () => {
+      location.href = '/test';
+      logEvent(analytics, 'test_start', { name: 'start'});
+    }
+  </script>
+</body>
+</html>
