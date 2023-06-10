@@ -223,8 +223,8 @@ ul {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: 0px center;
   padding: 0px;
@@ -253,8 +253,8 @@ ul {
 }
 
 .shares button svg {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   fill: rgb(255, 255, 255);
 }
 
