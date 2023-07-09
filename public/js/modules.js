@@ -2,7 +2,7 @@
 
 // firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyD0E0Mxfhmr6qBxL8XXQGN-Wv5XwIO8fBo",
+    apiKey: "Firebase API 키",
     authDomain: "egg-type.firebaseapp.com",
     projectId: "egg-type",
     storageBucket: "egg-type.appspot.com",
@@ -12,6 +12,6 @@ const firebaseConfig = {
 };
 
 // kakao_api
-const kakao_key = '6f8ae0c3f3cb90b724519b0f1a8b9f93';
+const kakao_key = 'Kakao Developers API 키';
 
 export {firebaseConfig, kakao_key};
