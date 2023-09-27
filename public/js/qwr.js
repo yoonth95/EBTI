@@ -68,7 +68,7 @@ const w = "eyIwIjp7IjEiOlsxLDAsMCwwLDAsMCwwLDBdLCIyIjpbMCwxLDAsMCwwLDAsMCwwXX0sI
 const r = {
   "ESTP": 1,
   "ISTJ": 2,
-  "ISPF": 3,
+  "ISFP": 3,
   "ESTJ": 4,
   "ISTP": 5,
   "ISFJ": 6,
